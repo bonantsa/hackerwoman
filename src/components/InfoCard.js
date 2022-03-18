@@ -7,8 +7,8 @@ function InfoCard(props) {
       <>
         { props.info.map((item, index) => {
          return <div key={index}>
-                    <div>{item.title}</div>
                     <div>{item.name}</div>
+                    <h2>{item.title}</h2>
                 </div>
         })}
         <Link to={props.linkPath}>{props.linkName}</Link>

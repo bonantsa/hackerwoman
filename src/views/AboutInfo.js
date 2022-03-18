@@ -1,4 +1,6 @@
 import InfoCard from '../components/InfoCard.js'
+import BigHeader from '../components/BigHeader.js'
+
 function About() {
   const data = [
     {
@@ -13,7 +15,7 @@ function About() {
         }
       ],
       linkPath: '/skills',
-      linkName: 'See'
+      linkName: 'See all my skills'
     },
     {
       info: [
@@ -27,12 +29,12 @@ function About() {
         }
       ],
       linkPath: '/projects',
-      linkName: 'See'
+      linkName: 'See my top projects'
     },
     {
       info: [
         {
-          name: 'Here`s a picture of',
+          name: `Here's a picture of`,
           title: 'My dog'
         },
         {
@@ -41,14 +43,12 @@ function About() {
         }
       ],
       linkPath: '/doge',
-      linkName: 'See'
+      linkName: 'See all the cute dog pictures'
     }
   ]
   return (
     <>
-      <div>Hi there,</div>
-      <div>My name is</div>
-      <h1>Anniina</h1>
+      <BigHeader />
       { data.map((item) => {
          return <InfoCard { ...item } />
       })}
