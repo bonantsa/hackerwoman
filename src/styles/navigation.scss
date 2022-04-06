@@ -1,0 +1,22 @@
+@use 'colors';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto 8rem;
+    max-width: 1200px;
+}
+
+.nav-link {
+    color: colors.$color-white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+
+    &:first-child {
+        margin-left: 0rem;
+    }
+
+    &.active, &:hover {
+        color: colors.$color-yellow 
+    }
+}

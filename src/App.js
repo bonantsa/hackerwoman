@@ -4,21 +4,19 @@ import {
   NavLink,
   BrowserRouter
 } from "react-router-dom"
-import './App.css'
+import './App.scss'
+
 import About from './views/AboutInfo.js'
 import Skills from './views/MySkills.js'
 import Projects from './views/MyProjects.js'
 import Playground from './views/Playground.js'
 import DogGallery from './views/DogGallery.js'
+import NavBar from './components/NavBar.js'
 
 function App() {
   return ( 
-    <div>
       <BrowserRouter>
-          <NavLink to="/">About Anniina</NavLink>
-          <NavLink to="/skills">Skills</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/playground">Playground</NavLink>
+        <NavBar />
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/skills" element={<Skills />} />
@@ -27,7 +25,6 @@ function App() {
           <Route path="/playground" element={<Playground />} />
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 

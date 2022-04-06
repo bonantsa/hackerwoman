@@ -1,0 +1,43 @@
+@use 'colors';
+@use 'sizing';
+
+
+$margin: calc((100vw - 1200px) / 2);
+
+@mixin card-content {
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+
+    img, div {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.card {
+    transform: translateY(8rem);
+    background: colors.$color-purple-dark;
+
+    &:nth-child(odd) {
+        transform: translateX(calc($margin));
+        .content {
+            transform: translateX(calc($margin * -1));
+            @include card-content;
+        }
+    }
+
+    &:nth-child(even) {
+        transform: translateX(calc($margin * -1));
+        .content {
+            transform: translateX($margin);
+            @include card-content;
+        }
+    }
+
+    img {
+        transform: translateY(-8rem);
+    }
+}

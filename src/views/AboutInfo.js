@@ -1,4 +1,10 @@
 import InfoCard from '../components/InfoCard.js'
+import BigHeader from '../components/BigHeader.js'
+
+import Photo1 from '../content/woman2.jpg'
+import Photo2 from '../content/woman3.jpg'
+import Photo3 from '../content/lion.jpg'
+
 function About() {
   const data = [
     {
@@ -13,7 +19,11 @@ function About() {
         }
       ],
       linkPath: '/skills',
-      linkName: 'See'
+      linkName: 'See all my skills',
+      img: {
+        alt: 'Picture of a woman',
+        src: Photo1
+      }
     },
     {
       info: [
@@ -27,12 +37,16 @@ function About() {
         }
       ],
       linkPath: '/projects',
-      linkName: 'See'
+      linkName: 'See my top projects',
+      img: {
+        alt: 'Picture of a woman',
+        src: Photo2
+      }
     },
     {
       info: [
         {
-          name: 'Here`s a picture of',
+          name: `Here's a picture of`,
           title: 'My dog'
         },
         {
@@ -41,16 +55,22 @@ function About() {
         }
       ],
       linkPath: '/doge',
-      linkName: 'See'
+      linkName: 'See all the cute dog pictures',
+      img: {
+        alt: 'Picture of a woman',
+        src: Photo3
+      }
     }
   ]
   return (
     <>
-      <div>Hi there,</div>
-      <div>My name is</div>
-      <h1>Anniina</h1>
+      <div className='m-bottom--2xl'>
+        <BigHeader />
+      </div>
       { data.map((item) => {
-         return <InfoCard { ...item } />
+        return <div className='card m-bottom--3xl'>
+            <InfoCard { ...item } />
+          </div>
       })}
     </>
   )
