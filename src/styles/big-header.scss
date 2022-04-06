@@ -1,12 +1,35 @@
 @use 'base';
 @use 'sizing';
 
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+
+    img {
+        justify-self: center;
+        align-self: center;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .hero-section { 
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            justify-self: end;
+            align-self: center;
+        }
+    }
+  }
+
 .big-header {
     font-size: sizing.$font-sm;
     font-family: base.$body-font;
     text-transform: inherit;
-    grid-column-start: 2;
-    grid-column-end: 7;
+    justify-self: center;
+    align-self: center;
 
     span {
         display: block;

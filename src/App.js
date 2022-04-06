@@ -15,7 +15,6 @@ import NavBar from './components/NavBar.js'
 
 function App() {
   return ( 
-    <div className="container">
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -26,7 +25,6 @@ function App() {
           <Route path="/playground" element={<Playground />} />
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 

@@ -3,7 +3,8 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0 8rem;
+    margin: 2rem auto 8rem;
+    max-width: 1200px;
 }
 
 .nav-link {

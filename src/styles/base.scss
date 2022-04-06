@@ -11,6 +11,7 @@ body {
     color: colors.$color-white;
     font-weight: normal;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 @mixin heading {
