@@ -43,34 +43,5 @@ h4 {
 
 a {
     color: colors.$color-yellow;
-}
-
-// move this into component styles
-.big-header {
-    font-size: sizing.$font-sm;
-    font-family: $body-font;
-    text-transform: inherit;
-
-    span {
-        display: block;
-    }
-
-    div {
-        @include heading;
-        font-size: sizing.$font-2xl;
-        display: grid;
-        grid-template-columns: 50px 50px 50px 50px;
-        grid-template-rows: 80px 80px; 
-        column-gap: 10px;
-        row-gap: 15px;
-
-        span, a {
-            justify-self: center;
-            align-self: center;
-        }
-
-        :nth-child(4) {
-            grid-column-start: 1;
-        }
-    }
+    text-decoration: none;
 }

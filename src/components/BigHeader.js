@@ -4,10 +4,10 @@ import {
 
 function BigHeader() {
   return (
-    <>
-      <h1 className="big-header">
+    <div className="grid">
+      <h1 className="big-header item-center">
         <span>Hi there,</span>
-        <span>my name is</span>
+        <span className="p-bottom--md">my name is</span>
         <div>
             <span>A</span>
             <span>N</span>
@@ -18,7 +18,8 @@ function BigHeader() {
             <span>A</span>
         </div>
       </h1>
-    </>
+      <img className="item-width--6 item-center" src={require('../content/woman.jpg')} alt="Nainen aurinkolasit päässä" />
+    </div>
   )
 }
 

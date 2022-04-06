@@ -1,0 +1,25 @@
+@use 'sizing';
+
+.p--sm {
+    padding: sizing.$size-sm;
+}
+
+.p-top--sm {
+    padding-top: sizing.$size-sm;
+}
+
+.p-bottom--sm {
+    padding-bottom: sizing.$size-sm;
+}
+
+.p--md {
+    padding: sizing.$size-md;
+}
+
+.p-top--md {
+    padding-top: sizing.$size-md;
+}
+
+.p-bottom--md {
+    padding-bottom: sizing.$size-md;
+}

@@ -1,0 +1,41 @@
+@use 'base';
+@use 'sizing';
+
+.big-header {
+    font-size: sizing.$font-sm;
+    font-family: base.$body-font;
+    text-transform: inherit;
+    grid-column-start: 2;
+    grid-column-end: 7;
+
+    span {
+        display: block;
+    }
+
+    div {
+        @include base.heading;
+        font-size: sizing.$font-2xl;
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-template-rows: 80px 80px; 
+        column-gap: sizing.$size-lg;
+        row-gap: sizing.$size-md;
+
+        span, a {
+            justify-self: center;
+            align-self: center;
+        }
+
+        a {
+            transition: transform 250ms;
+        }
+
+        a:hover {
+            transform: rotate(25deg);
+        }
+
+        :nth-child(4) {
+            grid-column-start: 1;
+        }
+    }
+}
